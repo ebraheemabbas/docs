@@ -1,22 +1,118 @@
 <!DOCTYPE html>
 <html>
+    <style>
+    .introduce{
+        color:brown;
+        position: relative;
+        left:450px; 
+        background-color: cornsilk;
+        border: dotted;
+        width: max-content;
+        display: none;
+        font-size: 25px;
+        left:200px;
+
+      }
+        .Whatlearned{
+            color:brown;
+        position: relative;
+        left:200px;
+        border: dotted;
+        background-color: cornsilk;
+        width: max-content;
+        display: none;
+        font-size: 25px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        .sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: antiquewhite;
+}
+.sidenav a, .dropdown-btn ,.about,.learn{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+    </style>
+    
+
 <body>
-<h1>my first Webpage</h1>
-<main><p style="color: blue" >
+        <div class="sidenav">
+            <button class="about" onclick="aboutshow()">Introduce</button>
+            <button class="learn" onclick="learnshow()">Learned so far</button>
+                <button class="dropdown-btn">Links 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="https://github.com/ebraheemabbas/docs.git"  target="_blank"> my code</a>
+                  <a href="https://www.freecodecamp.org/forum/u/ebraheemabbas/preferences/account" target="_blank">freecodecamp</a>
+                  <a href="https://www.codewars.com/users/ebraheemabbas" target="_blank">codewars</a></a>
+                </div>
+              </div>
+    <main><p class="introduce" id="introduce" >
     I am Ebraheem Abbas , 24 years old , graduated from Technion's computer science faculty with gpa 84.<br>
             i am full motivate to learn more and extend my expirnce in my study field, so i am applaying to this program 
             <br> to get my hands on new branches in this field.
     
 </p>
 
-<p>
-i had learned some javascript,html,css principales, and discoved a new branch in the coding world </p>
-<p><a href="https://github.com/ebraheemabbas/docs.git"> my code</a>
-</p>
-<p><a href="https://www.freecodecamp.org/forum/u/ebraheemabbas/preferences/account">freecodecamp</a>
-</p>
-<p><a href="https://www.codewars.com/users/ebraheemabbas">codewars</a></p>
-</main>
+<p class="Whatlearned" id="Whatlearned" >
+I had learned some javascript,html,css principales, and discoved a new branch in the coding world </p>
 
+</main>
+<script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+        function aboutshow(){var element=document.getElementById("introduce");
+        element.style.display="block";
+        var element1=document.getElementById("Whatlearned");
+        element1.style.display="none";
+        }
+        function learnshow(){var element=document.getElementById("Whatlearned");
+        element.style.display="block";
+        var element1=document.getElementById("introduce");
+        element1.style.display="none";
+        }
+
+        </script>
 </body>
+
 </html>
