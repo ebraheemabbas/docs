@@ -1,0 +1,62 @@
+    .introduce{
+        color:brown;
+        position: absolute;
+        left:500px;
+        top: 200px; 
+        background-color: cornsilk;
+        width: max-content;
+        display: none;
+        font-size: 25px;
+        text-align: center;
+
+
+      }
+        .Whatlearned{
+            color:brown;
+        position: absolute;
+        left:500px;
+        top: 200px; 
+        text-align: center;
+
+        background-color: #fff8dc;
+        width: max-content;
+        display: none;
+        font-size: 25px;
+        }
+        /* Style the sidenav links and the dropdown button */
+        .sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: khaki;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: antiquewhite;
+}
+.sidenav a, .dropdown-btn ,.about,.learn{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: brown;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+body{
+    background-color: #fff8dc;
+}
